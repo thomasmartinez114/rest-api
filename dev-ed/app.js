@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv/config');
 
-// Middlewares
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -14,7 +14,7 @@ const postsRoute = require('./routes/posts');
 
 app.use('/posts', postsRoute);
 
-// ROUTES
+// Routes
 app.get('/', (req, res) => {
   res.send('We are on home');
 });
