@@ -1,8 +1,7 @@
-function sayHello(name) {
-  console.log('Hello ' + name);
-}
+console.log(); // global
 
-sayHello('Tommie');
+setTimeout();
+clearTimeout();
 
-// console.log(window);
-// comment
+setInterval();
+clearInterval();
