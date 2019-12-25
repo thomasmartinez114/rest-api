@@ -7,7 +7,7 @@ class Logger extends EventEmitter {
     // Send an HTTP request
     console.log(message);
 
-    // Raise an event
+    // Raise an event message
     this.emit('messageLogged', { id: 1, url: 'http://' });
   }
 }
