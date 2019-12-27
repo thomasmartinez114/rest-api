@@ -7,3 +7,6 @@ Tutorials for REST API's
 
 - NodeJS Course (Arnell Google Drive)
   - [ ] Rest API
+    - Dependencies
+      - [x] Express
+      - [x] Joi (Input validation)
