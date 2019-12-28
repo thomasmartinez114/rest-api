@@ -61,6 +61,21 @@ app.put('/api/courses/:id', (req, res) => {
   res.send(course);
 });
 
+// DELETE request
+app.delete('/api/courses/:id', (req, res) => {
+  // Look up course by ID
+  // Not exisiting, return 404
+  const course = courses.find(c => c.id === parseInt(req.params.id));
+  if (!course) res.status(404).send('The course with the given ID was not found!');
+
+  // Delete
+  const index = courses.indexOf(course);
+  courses.splice(index, 1);
+
+  // Return the same course
+  res.send(course);
+});
+
 function validateCourse(course) {
   const schema = {
     name: Joi.string()
