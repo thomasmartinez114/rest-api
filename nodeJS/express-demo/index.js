@@ -7,12 +7,12 @@ app.use(express.json());
 
 // Custom Middleware
 app.use(function(req, res, next) {
-  console.log('Logging...');
+  console.log('Logging....');
   next();
 });
 
 app.use(function(req, res, next) {
-  console.log('Authenticating...');
+  console.log('Authenticating....');
   next();
 });
 
