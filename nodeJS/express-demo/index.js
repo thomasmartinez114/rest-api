@@ -5,6 +5,17 @@ const app = express();
 // Middleware to request data from browser
 app.use(express.json());
 
+// Custom Middleware
+app.use(function(req, res, next) {
+  console.log('Logging...');
+  next();
+});
+
+app.use(function(req, res, next) {
+  console.log('Authenticating...');
+  next();
+});
+
 const courses = [
   { id: 1, name: 'course1' },
   { id: 2, name: 'course2' },
