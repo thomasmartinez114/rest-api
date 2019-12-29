@@ -4,8 +4,10 @@ const auth = require('./auth');
 const express = require('express');
 const app = express();
 
-// Middleware to request data from browser
+// Built-In Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // URL encoded payload parsed
+app.use(express.static('public'));
 
 // Custom Middleware
 app.use(logger);
