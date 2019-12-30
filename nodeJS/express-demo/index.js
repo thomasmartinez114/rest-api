@@ -13,7 +13,12 @@ app.use(express.static('public'));
 
 // Third Party Middleware
 app.use(helmet());
-app.use(morgan('tiny'));
+
+// Running middleware on Development phase not during Production
+if (app.get('env') === 'development') {
+  app.use(morgan('tiny'));
+  console.log('Morgan enabled...');
+}
 
 // Custom Middleware
 app.use(logger);
