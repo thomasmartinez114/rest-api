@@ -1,3 +1,4 @@
+const config = require('config');
 const helmet = require('helmet');
 const morgan = require('morgan'); // Logs HTTP requests to terminal - but can slow down app
 const Joi = require('joi');
@@ -14,6 +15,10 @@ app.use(express.static('public'));
 // Third Party Middleware
 app.use(helmet());
 
+// Configuration
+console.log('Application Name: ' + config.get('name'));
+console.log('Mail Server: ' + config.get('mail.host'));
+
 // Running middleware on Development phase not during Production
 if (app.get('env') === 'development') {
   app.use(morgan('tiny'));
@@ -22,7 +27,6 @@ if (app.get('env') === 'development') {
 
 // Custom Middleware
 app.use(logger);
-
 app.use(auth);
 
 const courses = [
