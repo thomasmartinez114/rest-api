@@ -1,3 +1,5 @@
+const helmet = require('helmet');
+const morgan = require('morgan'); // Logs HTTP requests to terminal - but can slow down app
 const Joi = require('joi');
 const logger = require('./logger');
 const auth = require('./auth');
@@ -8,6 +10,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // URL encoded payload parsed
 app.use(express.static('public'));
+
+// Third Party Middleware
+app.use(helmet());
+app.use(morgan('tiny'));
 
 // Custom Middleware
 app.use(logger);
