@@ -1,24 +1,19 @@
 // Asynchronous
 console.log('Before');
-getUser(1, user => {
-  // Get the repositories
-  getRepositories(user.gitHubUsername, repos => {
-    getCommits(repo, commits => {});
-  });
-});
-console.log('After');
-// CALLBACK HELL or XMAS TREE INDENTATION
-
-// Synchronous
-console.log('Before');
-const user = getUser(1);
-const repos = getRepositories(user.gitHubUsername);
-const commits = getCommits(repos[0]);
+getUser(1, getRepositories);
 console.log('After');
 
-// Callbacks
-// Promises
-// Async/await
+function getRepositories(user) {
+  getRepositories(user.gitHubUsername, getCommits);
+}
+
+function getCommits(repos) {
+  getCommits(repo, displayCommits);
+}
+
+function displayCommits(commits) {
+  console.log(commits);
+}
 
 function getUser(id, callback) {
   setTimeout(() => {
