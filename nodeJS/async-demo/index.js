@@ -1,5 +1,5 @@
 console.log('Before');
-getUser(1, function(user) {
+getUser(1, user => {
   console.log('User', user);
 });
 console.log('After');
