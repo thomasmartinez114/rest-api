@@ -1,18 +1,18 @@
 console.log('Before');
-getUser(1);
+getUser(1, function(user) {
+    console.log('User', user)
+});
 console.log('After');
 
 // Callbacks
 // Promises
 // Async/await
 
-function getUser(id) {
+function getUser(id, callback) {
   setTimeout(() => {
     console.log('Reading a user from a database...');
-    return { id: id, getHubUsername: 'mosh' };
+    callback({ id: id, getHubUsername: 'mosh' };)
   }, 2000);
-
-  return 1;
 }
 
 // Will Log
