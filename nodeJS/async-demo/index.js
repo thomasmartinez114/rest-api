@@ -15,11 +15,14 @@ function displayCommits(commits) {
   console.log(commits);
 }
 
-function getUser(id, callback) {
-  setTimeout(() => {
-    console.log('Reading a user from a database...');
-    callback({ id: id, gitHubUsername: 'mosh' });
-  }, 2000); // 2 sec timeout
+function getUser(id) {
+  return new Promise((resolve, reject) => {
+    // Kick off some async work
+    setTimeout(() => {
+      console.log('Reading a user from a database...');
+      resolve({ id: id, gitHubUsername: 'mosh' });
+    }, 2000); // 2 sec timeout
+  });
 }
 
 function getRepositories(username, callback) {
