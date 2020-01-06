@@ -57,16 +57,18 @@ async function getCourses() {
     // .or([{ author: 'Mosh' }, { isPublished: true }])
 
     //              Regular Expressions
-    // Starts with Mosh
-    .find({ author: /^Mosh/ })
-    // Ends with Hamedani /i not case sensitive
-    .find({ author: /Hamedani$/i })
-    // Contains Mosh
-    .find({ author: /.*Mosh.*/ }) // characters before or after
+    //              Starts with Mosh
+    //.find({ author: /^Mosh/ })
+    //              Ends with Hamedani /i not case sensitive
+    //.find({ author: /Hamedani$/i })
+    //              Contains Mosh
+    //.find({ author: /.*Mosh.*/ }) // characters before or after
 
+    .find({ author: 'Mosh', isPublished: true })
     .limit(10)
     .sort({ name: 1 }) // 1 ascending, -1 descending
-    .select({ name: 1, tags: 1 });
+    // .select({ name: 1, tags: 1 });
+    .count(); // to get how many docs match the filter
   console.log(courses);
 }
 
