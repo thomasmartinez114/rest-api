@@ -12,3 +12,17 @@ const courseSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now },
   isPublished: Boolean
 });
+
+// Classes, Objects
+// Course, nodeCourse
+
+// Class
+const Course = mongoose.model('Course', courseSchema);
+//Object
+const course = new Course({
+  name: 'Node.js Course',
+  author: 'Mosh',
+  tags: ['node', 'backend'],
+  // Date is defaulted
+  isPublished: true
+});
