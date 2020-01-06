@@ -47,10 +47,23 @@ async function getCourses() {
 
   const courses = await Course
     // .find({ author: 'Mosh', isPublished: true })
+
+    //              Comparasion Operators
     // .find({ price: { $gte: 10, $lte: 20 } })
     // .find({ price: { $in: [10, 15, 20] } })
-    .find()
-    .or([{ author: 'Mosh' }, { isPublished: true }])
+
+    //              Logical Operators
+    // .find()
+    // .or([{ author: 'Mosh' }, { isPublished: true }])
+
+    //              Regular Expressions
+    // Starts with Mosh
+    .find({ author: /^Mosh/ })
+    // Ends with Hamedani /i not case sensitive
+    .find({ author: /Hamedani$/i })
+    // Contains Mosh
+    .find({ author: /.*Mosh.*/ }) // characters before or after
+
     .limit(10)
     .sort({ name: 1 }) // 1 ascending, -1 descending
     .select({ name: 1, tags: 1 });
