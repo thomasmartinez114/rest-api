@@ -41,10 +41,16 @@ async function getCourses() {
   // in
   // nin (not in)
 
+  // Logical Operators
+  // or
+  // and
+
   const courses = await Course
     // .find({ author: 'Mosh', isPublished: true })
     // .find({ price: { $gte: 10, $lte: 20 } })
-    .find({ price: { $in: [10, 15, 20] } })
+    // .find({ price: { $in: [10, 15, 20] } })
+    .find()
+    .or([{ author: 'Mosh' }, { isPublished: true }])
     .limit(10)
     .sort({ name: 1 }) // 1 ascending, -1 descending
     .select({ name: 1, tags: 1 });
