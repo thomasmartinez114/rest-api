@@ -31,44 +31,14 @@ async function createCourse() {
 }
 
 async function getCourses() {
-  // Comparasion operators
-  // eq (equal)
-  // ne (not equal)
-  // gt (greater than)
-  // gte (greater than or equal to)
-  // lt (less than)
-  // lte (less than or equal to)
-  // in
-  // nin (not in)
+  const pageNumber = 2;
+  const pageSize = 10;
 
-  // Logical Operators
-  // or
-  // and
-
-  const courses = await Course
-    // .find({ author: 'Mosh', isPublished: true })
-
-    //              Comparasion Operators
-    // .find({ price: { $gte: 10, $lte: 20 } })
-    // .find({ price: { $in: [10, 15, 20] } })
-
-    //              Logical Operators
-    // .find()
-    // .or([{ author: 'Mosh' }, { isPublished: true }])
-
-    //              Regular Expressions
-    //              Starts with Mosh
-    //.find({ author: /^Mosh/ })
-    //              Ends with Hamedani /i not case sensitive
-    //.find({ author: /Hamedani$/i })
-    //              Contains Mosh
-    //.find({ author: /.*Mosh.*/ }) // characters before or after
-
-    .find({ author: 'Mosh', isPublished: true })
-    .limit(10)
+  const courses = await Course.find({ author: 'Mosh', isPublished: true })
+    .skip((pageNumber - 1) * pageSize)
+    .limit(pageSize)
     .sort({ name: 1 }) // 1 ascending, -1 descending
-    // .select({ name: 1, tags: 1 });
-    .count(); // to get how many docs match the filter
+    .select({ name: 1, tags: 1 });
   console.log(courses);
 }
 
