@@ -23,9 +23,17 @@ const courseSchema = new mongoose.Schema({
 // Model
 const Course = mongoose.model('Course', courseSchema);
 
+// Querying the databases
 async function getCourses() {
-  const courses = await Course.find().select({ name: 1, author: 1 });
+  return await Course.find({ isPublished: true, tags: 'backend' })
+    .sort('name')
+    .select('name author');
+}
+
+// Running the query
+async function run() {
+  const courses = await getCourses();
   console.log(courses);
 }
 
-getCourses();
+run();
