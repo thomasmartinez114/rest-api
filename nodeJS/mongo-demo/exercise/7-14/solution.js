@@ -19,3 +19,13 @@ const courseSchema = new mongoose.Schema({
   isPublished: Boolean,
   price: Number
 });
+
+// Model
+const Course = mongoose.model('Course', courseSchema);
+
+async function getCourses() {
+  const courses = await Course.find().select({ name: 1, author: 1 });
+  console.log(courses);
+}
+
+getCourses();
