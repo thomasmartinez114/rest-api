@@ -12,13 +12,12 @@ const genreSchema = new mongoose.Schema({
   }
 });
 
-const genres = [
-  { id: 1, name: 'Action' },
-  { id: 2, name: 'Horror' },
-  { id: 3, name: 'Romance' }
-];
+// Model
+const Genre = new mongoose.model('Genre', genreSchema);
 
-router.get('/', (req, res) => {
+// Return all genres in DB
+router.get('/', async (req, res) => {
+  const genres = await Genre.find().sort('name');
   res.send(genres);
 });
 
