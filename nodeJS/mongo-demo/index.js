@@ -79,12 +79,12 @@ async function getCourses() {
   const pageNumber = 2;
   const pageSize = 10;
 
-  const courses = await Course.find({ author: 'Mosh', isPublished: true })
-    .skip((pageNumber - 1) * pageSize)
-    .limit(pageSize)
+  const courses = await Course.find({ _id: '5e155f9f26dacf1004090056' })
+    // .skip((pageNumber - 1) * pageSize)
+    // .limit(pageSize)
     .sort({ name: 1 }) // 1 ascending, -1 descending
-    .select({ name: 1, tags: 1 });
-  console.log(courses);
+    .select({ name: 1, tags: 1, price: 1 });
+  console.log(courses[0].price);
 }
 
 getCourses();
@@ -113,4 +113,4 @@ async function removeCourse(id) {
   console.log(course);
 }
 
-createCourse();
+getCourses();
