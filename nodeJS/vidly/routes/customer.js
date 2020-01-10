@@ -54,10 +54,8 @@ router.put('/:id', async (req, res) => {
 
   const customer = await Customer.findByIdAndUpdate(
     req.params.id,
-    { name: req.body.name },
-    {
-      new: true
-    }
+    { name: req.body.name, isGold: req.body.isGold, phone: req.body.phone },
+    { new: true }
   );
 
   // Customer doesnt exisit - 404 error
@@ -65,6 +63,8 @@ router.put('/:id', async (req, res) => {
 
   res.send(customer);
 });
+
+// Delete customer
 
 function validateCustomer(customer) {
   const schema = {
