@@ -65,6 +65,15 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete customer
+router.delete('/:id', async (req, res) => {
+  const customer = await Customer.findByIdAndRemove(req.params.id);
+
+  // Customer doesnt exist - 404 error
+  if (!customer) return res.status(404).send('The customer with the given ID was not found.');
+
+  // Return the deleted customer
+  res.send(customer);
+});
 
 function validateCustomer(customer) {
   const schema = {
