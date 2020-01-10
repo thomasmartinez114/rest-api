@@ -75,6 +75,15 @@ router.delete('/:id', async (req, res) => {
   res.send(customer);
 });
 
+// Get a single customer
+router.get('/:id', asynce (req, res) => {
+    const customer = await Customer.findById(req.params.id);
+
+    if (!customer) return res.status(404).send('The customer with the given ID was not found.');
+
+    res.send(customer);
+})
+
 function validateCustomer(customer) {
   const schema = {
     name: Joi.string()
