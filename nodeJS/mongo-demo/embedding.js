@@ -17,7 +17,10 @@ const Course = mongoose.model(
   'Course',
   new mongoose.Schema({
     name: String,
-    author: authorSchema
+    author: {
+      type: authorSchema,
+      required: true
+    }
   })
 );
 
