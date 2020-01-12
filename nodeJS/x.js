@@ -15,3 +15,17 @@ let course = {
     name: 'Mosh'
   }
 };
+
+// Hybrid Approach
+// great for snapshot of data
+let author = {
+  name: 'Mosh'
+  // 50 other properties
+};
+
+let course = {
+  author: {
+    id: 'ref',
+    name: 'Mosh'
+  }
+};
