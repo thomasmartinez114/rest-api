@@ -49,5 +49,10 @@ async function updateAuthor(courseId) {
   course.save();
 }
 
-createCourse('Node Course', [new Author({ name: 'Mosh' }), new Author({ name: 'John' })]);
-// updateAuthor('5e1ba6f64f6566219c471666');
+async function addAuthor(courseId, author) {
+  const course = await Course.findById(courseId);
+  course.authors.push(author);
+  course.save();
+}
+
+addAuthor('5e1bab1da30907508c337b4c', new Author({ name: 'Amy' }));
