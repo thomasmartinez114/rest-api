@@ -6,7 +6,10 @@ Tutorials for REST API's
     - https://www.youtube.com/watch?v=vjf774RKrLc&feature=youtu.be
 
 - NodeJS Course (Arnell Google Drive)
+
   - [ ] Rest API
     - Dependencies
       - [x] Express
       - [x] Joi (Input validation)
+
+- NetNinja
