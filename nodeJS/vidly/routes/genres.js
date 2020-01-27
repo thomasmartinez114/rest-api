@@ -6,8 +6,13 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const genres = await Genre.find().sort('name');
-  res.send(genres);
+  try {
+    const genres = await Genre.find().sort('name');
+    res.send(genres);
+  } catch (ex) {
+    // Log the exception
+    res.status(500).send('Something failed.'); // 500 = Internal Server Error
+  }
 });
 
 router.post('/', auth, async (req, res) => {
