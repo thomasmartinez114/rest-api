@@ -6,6 +6,7 @@ const genres = require('./routes/genres');
 const customers = require('./routes/customers');
 const movies = require('./routes/movies');
 const rentals = require('./routes/rentals');
+const error = require('./middleware/error');
 const users = require('./routes/users');
 const auth = require('./routes/auth');
 const express = require('express');
@@ -27,11 +28,7 @@ app.use('/api/customers', customers);
 app.use('/api/movies', movies);
 app.use('/api/users', users);
 app.use('/api/auth', auth);
-
-app.use(function(err, req, res, next) {
-  // Log the exception
-  res.status(500).send('Something failed.'); // 500 = Internal Server Error
-});
+app.use(error);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
