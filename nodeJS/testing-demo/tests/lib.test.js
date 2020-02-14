@@ -17,13 +17,13 @@ const lib = require('../lib');
 //   });
 // });
 
-describe('greet', () => {
-  it('should return the greeting message', () => {
-    const result = lib.greet('Mosh');
-    expect(result).toMatch(/Mosh/); // Regular expression
-    expect(result).toContain('Mosh'); // Another way w/o RegEx
-  });
-});
+// describe('greet', () => {
+//   it('should return the greeting message', () => {
+//     const result = lib.greet('Mosh');
+//     expect(result).toMatch(/Mosh/); // Regular expression
+//     expect(result).toContain('Mosh'); // Another way w/o RegEx
+//   });
+// });
 
 describe('getCurrencies', () => {
   it('should return supported currencies', () => {
@@ -38,5 +38,10 @@ describe('getCurrencies', () => {
     expect(result[1]).toBe('AUD');
     expect(result[2]).toBe('EUR');
     expect(result.length).toBe(3);
+
+    // Proper way
+    expect(result).toContain('USD');
+    expect(result).toContain('AUD');
+    expect(result).toContain('EUR');
   });
 });
