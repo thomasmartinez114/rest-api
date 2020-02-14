@@ -25,4 +25,9 @@ describe('fizzBuzz', () => {
     const result = lib.fizzBuzz(3);
     expect(result).toBe('Fizz');
   });
+
+  it('should return Buzz if input is only divisible by 5', () => {
+    const result = lib.fizzBuzz(5);
+    expect(result).toBe('Buzz');
+  });
 });
