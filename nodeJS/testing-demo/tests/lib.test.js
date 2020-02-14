@@ -24,3 +24,19 @@ describe('greet', () => {
     expect(result).toContain('Mosh'); // Another way w/o RegEx
   });
 });
+
+describe('getCurrencies', () => {
+  it('should return supported currencies', () => {
+    const result = lib.getCurrencies();
+
+    // Too general testing - bad
+    expect(result).toBeDefined();
+    expect(result).not.toBeNull();
+
+    // Too specific
+    expect(result[0]).toBe('USD');
+    expect(result[1]).toBe('AUD');
+    expect(result[2]).toBe('EUR');
+    expect(result.length).toBe(3);
+  });
+});
