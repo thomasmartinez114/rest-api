@@ -17,16 +17,16 @@ const mail = require('./mail');
 // };
 
 // Testing objects
-module.exports.getProduct = function(productId) {
-  return { id: productId, price: 10, category: 'Funny' };
+// module.exports.getProduct = function(productId) {
+//   return { id: productId, price: 10, category: 'Funny' };
+// };
+
+// Testing exceptions
+module.exports.registerUser = function(username) {
+  if (!username) throw new Error('Username is required.');
+
+  return { id: new Date().getTime(), username: username };
 };
-
-// // Testing exceptions
-// module.exports.registerUser = function(username) {
-//   if (!username) throw new Error('Username is required.');
-
-//   return { id: new Date().getTime(), username: username }
-// }
 
 // // Mock functions
 // module.exports.applyDiscount = function(order) {

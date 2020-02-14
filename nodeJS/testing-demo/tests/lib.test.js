@@ -49,14 +49,31 @@ const lib = require('../lib');
 //   });
 // });
 
-describe('getProduct', () => {
-  it('should return the product with the given id', () => {
-    const result = lib.getProduct(1);
+// describe('getProduct', () => {
+//   it('should return the product with the given id', () => {
+//     const result = lib.getProduct(1);
 
-    // Test obj with the same # of properites
-    expect(result).toEqual({ id: 1, price: 10 });
+//     // Test obj with the same # of properites
+//     expect(result).toEqual({ id: 1, price: 10 });
 
-    // this will look in the obj for just the listed properities
-    expect(result).toMatchObject({ id: 1, price: 10 });
+//     // this will look in the obj for just the listed properities
+//     expect(result).toMatchObject({ id: 1, price: 10 });
+//   });
+// });
+
+describe('registerUser', () => {
+  it('should throw if username is falsy', () => {
+    // Null
+    // undefined
+    // NaN
+    // ''
+    // 0
+    // false
+    const args = [null, undefined, NaN, '', 0, false];
+    args.forEach(a => {
+      expect(() => {
+        lib.registerUser(null);
+      }).toThrow();
+    });
   });
 });
