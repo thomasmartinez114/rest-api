@@ -97,13 +97,10 @@ describe('notifyCustomer', () => {
   it('should send an email to the customer', () => {
     db.getCustomerSync = jest.fn().mockReturnValue({ email: 'a' });
 
-    let mailSent = false;
-    mail.send = function(email, message) {
-      mailSent = true;
-    };
+    mail.send = jest.fn();
 
     lib.notifyCustomer({ customerId: 1 });
 
-    expect(mailSent).toBe(true);
+    expect(mail.send).toHaveBennCalled();
   });
 });
