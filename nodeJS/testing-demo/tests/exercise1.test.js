@@ -20,4 +20,9 @@ describe('fizzBuzz', () => {
     const result = lib.fizzBuzz(15);
     expect(result).toBe('FizzBuzz');
   });
+
+  it('should return Fizz if input is only divisible by 3', () => {
+    const result = lib.fizzBuzz(3);
+    expect(result).toBe('Fizz');
+  });
 });
