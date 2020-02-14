@@ -43,5 +43,8 @@ describe('getCurrencies', () => {
     expect(result).toContain('USD');
     expect(result).toContain('AUD');
     expect(result).toContain('EUR');
+
+    // Ideal way
+    expect(result).toEqual(expect.arrayContaining(['EUR', 'USD', 'AUD']));
   });
 });
