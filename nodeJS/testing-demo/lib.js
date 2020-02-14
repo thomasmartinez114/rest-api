@@ -12,14 +12,14 @@ const mail = require('./mail');
 // };
 
 // Testing arrays
-module.exports.getCurrencies = function() {
-  return ['USD', 'AUD', 'EUR'];
-};
+// module.exports.getCurrencies = function() {
+//   return ['USD', 'AUD', 'EUR'];
+// };
 
-// // Testing objects
-// module.exports.getProduct = function(productId) {
-//   return { id: productId, price: 10 };
-// }
+// Testing objects
+module.exports.getProduct = function(productId) {
+  return { id: productId, price: 10 };
+};
 
 // // Testing exceptions
 // module.exports.registerUser = function(username) {
