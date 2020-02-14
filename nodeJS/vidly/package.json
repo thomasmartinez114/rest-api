@@ -4,7 +4,7 @@
   "description": "Movie Rental Service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "author": "Thomas Martinez",
   "license": "ISC",
@@ -21,5 +21,8 @@
     "nodemon": "^2.0.2",
     "winston": "^3.2.1",
     "winston-mongodb": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
