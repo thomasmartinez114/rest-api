@@ -15,4 +15,9 @@ describe('fizzBuzz', () => {
       lib.fizzBuzz();
     }).toThrow();
   });
+
+  it('should return Fizzbuzz if input is divisible by 3 and 5', () => {
+    const result = lib.fizzBuzz(15);
+    expect(result).toBe('FizzBuzz');
+  });
 });
