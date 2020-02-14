@@ -1,4 +1,5 @@
 const lib = require('../lib');
+const db = require('../db');
 
 // describe('absolute', () => {
 //   it('should return a positive number if input is positive', () => {
@@ -61,19 +62,32 @@ const lib = require('../lib');
 //   });
 // });
 
-describe('registerUser', () => {
-  it('should throw if username is falsy', () => {
-    const args = [null, undefined, NaN, '', 0, false];
-    args.forEach(a => {
-      expect(() => {
-        lib.registerUser(null);
-      }).toThrow();
-    });
-  });
+// describe('registerUser', () => {
+//   it('should throw if username is falsy', () => {
+//     const args = [null, undefined, NaN, '', 0, false];
+//     args.forEach(a => {
+//       expect(() => {
+//         lib.registerUser(null);
+//       }).toThrow();
+//     });
+//   });
 
-  it('should return a user object if valid username is passed', () => {
-    const result = lib.registerUser('mosh');
-    expect(result).toMatchObject({ username: 'mosh' });
-    expect(result.id).toBeGreaterThan(0);
+//   it('should return a user object if valid username is passed', () => {
+//     const result = lib.registerUser('mosh');
+//     expect(result).toMatchObject({ username: 'mosh' });
+//     expect(result.id).toBeGreaterThan(0);
+//   });
+// });
+
+describe('applyDiscount', () => {
+  it('should apply 10% if customer has more than 10 points', () => {
+    db.getCustomerSync = function(customerId) {
+      console.log('Fake reading customer....');
+      return { id: customerId, points: 20 };
+    };
+
+    const order = { customerId: 1, totalPrice: 10 };
+    lib.applyDiscount(order);
+    expect(order.totalPrice).toBe(9);
   });
 });
