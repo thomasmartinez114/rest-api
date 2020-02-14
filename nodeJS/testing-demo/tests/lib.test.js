@@ -52,6 +52,7 @@ const lib = require('../lib');
 describe('getProduct', () => {
   it('should return the product with the given id', () => {
     const result = lib.getProduct(1);
-    expect(result).toEqual({ id: 1, price: 10 });
+    expect(result).toEqual({ id: 1, price: 10 }); // Test obj with the same # of properites
+    expect(result).toMatchObject({ id: 1, price: 10 }); // this will look in the obj for just the listed properities
   });
 });
