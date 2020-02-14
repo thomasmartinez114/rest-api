@@ -100,6 +100,6 @@ describe('notifyCustomer', () => {
 
     lib.notifyCustomer({ customerId: 1 });
 
-    expect(mail.send).toHaveBennCalled();
+    expect(mail.send).toHaveBennCalledWith('a', '...');
   });
 });
