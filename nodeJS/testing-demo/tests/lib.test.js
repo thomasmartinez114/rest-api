@@ -95,16 +95,7 @@ const mail = require('../mail');
 
 describe('notifyCustomer', () => {
   it('should send an email to the customer', () => {
-   
-    const mockFunction = jest.fn();
-    // mockFunction.mockReturnValue(1);
-    // mockFunction.mockResolvedValue(1);
-    mockFunction.mockRejectedValue(new Error('...'));
-    const result = await mockFunction();
-
-    db.getCustomerSync = function(customerId) {
-      return { email: 'a' };
-    };
+    db.getCustomerSync = jest.fn().mockReturnValue({ email: 'a' });
 
     let mailSent = false;
     mail.send = function(email, message) {
