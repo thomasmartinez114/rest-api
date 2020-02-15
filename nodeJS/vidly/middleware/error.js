@@ -1,15 +1,14 @@
 const winston = require('winston');
 
-module.exports = function(err, req, res, next) {
-  // Log the exception
+module.exports = function(err, req, res, next){
   winston.error(err.message, err);
 
   // error
   // warn
   // info
   // verbose
-  // debug
+  // debug 
   // silly
 
-  res.status(500).send('Something failed.'); // 500 = Internal Server Error
-};
+  res.status(500).send('Something failed.');
+}
