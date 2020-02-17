@@ -32,4 +32,13 @@ router.post('/', auth, async (req, res) => {
   return res.status(200).send(rental);
 });
 
+function validateReturn(req) {
+  const schema = {
+    customerId: Joi.string().required(),
+    movieId: Joi.string().required()
+  };
+
+  return Joi.validate(req, schema);
+}
+
 module.exports = router;
