@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1581911382365" clover="3.2.0">
-  <project timestamp="1581911382366" name="All files">
-    <metrics statements="279" coveredstatements="185" conditionals="64" coveredconditionals="18" methods="40" coveredmethods="16" elements="383" coveredelements="219" complexity="0" loc="279" ncloc="279" packages="5" files="21" classes="21">
+<coverage generated="1581961720312" clover="3.2.0">
+  <project timestamp="1581961720312" name="All files">
+    <metrics statements="286" coveredstatements="192" conditionals="64" coveredconditionals="18" methods="41" coveredmethods="17" elements="391" coveredelements="227" complexity="0" loc="286" ncloc="286" packages="5" files="22" classes="22">
       <package name="vidly">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="index.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\index.js">
@@ -119,7 +119,7 @@
         </file>
       </package>
       <package name="vidly.routes">
-        <metrics statements="164" coveredstatements="82" conditionals="54" coveredconditionals="9" methods="22" coveredmethods="4"/>
+        <metrics statements="169" coveredstatements="87" conditionals="54" coveredconditionals="9" methods="23" coveredmethods="5"/>
         <file name="auth.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\routes\auth.js">
           <metrics statements="19" coveredstatements="9" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="3" type="stmt"/>
@@ -275,6 +275,14 @@
           <line num="61" count="0" type="stmt"/>
           <line num="64" count="3" type="stmt"/>
         </file>
+        <file name="returns.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\routes\returns.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+        </file>
         <file name="users.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\routes\users.js">
           <metrics statements="24" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="3" type="stmt"/>
@@ -304,7 +312,7 @@
         </file>
       </package>
       <package name="vidly.startup">
-        <metrics statements="38" coveredstatements="36" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="6"/>
+        <metrics statements="40" coveredstatements="38" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="6"/>
         <file name="config.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\startup\config.js">
           <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
           <line num="1" count="3" type="stmt"/>
@@ -333,7 +341,7 @@
           <line num="14" count="3" type="stmt"/>
         </file>
         <file name="routes.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\startup\routes.js">
-          <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="1" count="3" type="stmt"/>
           <line num="2" count="3" type="stmt"/>
           <line num="3" count="3" type="stmt"/>
@@ -342,7 +350,7 @@
           <line num="6" count="3" type="stmt"/>
           <line num="7" count="3" type="stmt"/>
           <line num="8" count="3" type="stmt"/>
-          <line num="10" count="3" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
           <line num="11" count="3" type="stmt"/>
           <line num="12" count="3" type="stmt"/>
           <line num="13" count="3" type="stmt"/>
@@ -351,6 +359,8 @@
           <line num="16" count="3" type="stmt"/>
           <line num="17" count="3" type="stmt"/>
           <line num="18" count="3" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
         </file>
         <file name="validation.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\startup\validation.js">
           <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
