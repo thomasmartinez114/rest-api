@@ -8,7 +8,7 @@ describe('/api/returns', () => {
   let movieId;
   let rental;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     server = require('../../index');
 
     customerId = mongoose.Types.ObjectId();
@@ -34,8 +34,8 @@ describe('/api/returns', () => {
     await Rental.remove({});
   });
 
-  it('should work', () => {
-      const result = await Rental.findById(rental._id);
-      expect(result).not.toBeNull();
-  })
+  it('should work', async () => {
+    const result = await Rental.findById(rental._id);
+    expect(result).not.toBeNull();
+  });
 });
