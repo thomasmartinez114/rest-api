@@ -2,6 +2,7 @@ const moment = require('moment');
 const request = require('supertest');
 const { Rental } = require('../../models/rental');
 const { User } = require('../../models/user');
+const { Movie } = require('../../models/movie');
 const mongoose = require('mongoose');
 
 describe('/api/returns', () => {
@@ -119,6 +120,13 @@ describe('/api/returns', () => {
       .toDate();
     await rental.save();
 
+    const res = await exec();
+
+    const rentalInDb = await Rental.findById(rental._id);
+    expect(rentalInDb.rentalFee).toBe(14);
+  });
+
+  it('should increase the movie stock if input is valid', async () => {
     const res = await exec();
 
     const rentalInDb = await Rental.findById(rental._id);
