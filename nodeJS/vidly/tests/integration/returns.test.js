@@ -26,6 +26,7 @@ describe('/api/returns', () => {
       }
     });
     await rental.save();
+    await Rental.remove({});
   });
 
   afterEach(async () => {
