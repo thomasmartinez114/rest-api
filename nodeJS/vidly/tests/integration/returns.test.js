@@ -19,8 +19,13 @@ describe('/api/returns', () => {
         name: '12345',
         phone: '12345'
       },
-      movie: {}
+      movie: {
+        _id: movieId,
+        title: '12345',
+        dailyRentalRate: 2
+      }
     });
+    await rental.save();
   });
 
   afterEach(async () => {
