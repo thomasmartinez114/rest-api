@@ -26,11 +26,10 @@ describe('/api/returns', () => {
       }
     });
     await rental.save();
-    await Rental.remove({});
   });
 
   afterEach(async () => {
     server.close();
-    await Genre.remove({});
+    await Rental.remove({});
   });
 });
