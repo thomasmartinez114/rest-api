@@ -127,10 +127,14 @@ describe('/api/returns', () => {
     expect(rentalInDb.rentalFee).toBe(14);
   });
 
-  it('should increase the movie stock if input is valid', async () => {
+  it('should return the rental if input is valid', async () => {
     const res = await exec();
 
-    const movieInDeb = await Movie.findById(movieId);
-    expect(movieInDb.numberInStock).toBe(movie.numberInStock + 1);
+    const rentalInDb = await Rental.findById(rental._id);
+    expect(res.body).toHaveProperty('dateOut');
+    expect(res.body).toHaveProperty('dateReturned');
+    expect(res.body).toHaveProperty('rentalFee');
+    expect(res.body).toHaveProperty('customer');
+    expect(res.body).toHaveProperty('movie');
   });
 });
