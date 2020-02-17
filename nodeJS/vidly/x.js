@@ -10,6 +10,7 @@
 // ----------- POSITIVE CASES --------------------
 // Return 200 if valid request
 // Set the return date
-// Calculate rental fee
+// Calculate rental fee (numberOfDays * movie.dailyRentalRate)
 // Increase the stock of movie
 // Return the rental & summary (dateout, dateReturned, rentalReceived)
+
