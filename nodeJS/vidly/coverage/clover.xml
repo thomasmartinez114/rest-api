@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1581984323341" clover="3.2.0">
-  <project timestamp="1581984323341" name="All files">
-    <metrics statements="288" coveredstatements="134" conditionals="68" coveredconditionals="1" methods="39" coveredmethods="3" elements="395" coveredelements="138" complexity="0" loc="288" ncloc="288" packages="5" files="18" classes="18">
+<coverage generated="1581984794217" clover="3.2.0">
+  <project timestamp="1581984794217" name="All files">
+    <metrics statements="287" coveredstatements="136" conditionals="66" coveredconditionals="1" methods="38" coveredmethods="3" elements="391" coveredelements="140" complexity="0" loc="287" ncloc="287" packages="5" files="18" classes="18">
       <package name="vidly">
         <metrics statements="11" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="index.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\index.js">
@@ -50,7 +50,7 @@
         </file>
       </package>
       <package name="vidly.models">
-        <metrics statements="44" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <metrics statements="47" coveredstatements="36" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
         <file name="customer.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\models\customer.js">
           <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
@@ -85,14 +85,17 @@
           <line num="43" count="2" type="stmt"/>
         </file>
         <file name="rental.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\models\rental.js">
-          <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <metrics statements="10" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
-          <line num="59" count="0" type="stmt"/>
-          <line num="64" count="0" type="stmt"/>
-          <line num="67" count="2" type="stmt"/>
-          <line num="68" count="2" type="stmt"/>
+          <line num="59" count="2" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="66" count="2" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="74" count="0" type="stmt"/>
+          <line num="77" count="2" type="stmt"/>
+          <line num="78" count="2" type="stmt"/>
         </file>
         <file name="user.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\models\user.js">
           <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
@@ -112,7 +115,7 @@
         </file>
       </package>
       <package name="vidly.routes">
-        <metrics statements="189" coveredstatements="69" conditionals="60" coveredconditionals="0" methods="26" coveredmethods="0"/>
+        <metrics statements="185" coveredstatements="69" conditionals="58" coveredconditionals="0" methods="24" coveredmethods="0"/>
         <file name="auth.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\routes\auth.js">
           <metrics statements="19" coveredstatements="9" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
@@ -269,7 +272,7 @@
           <line num="64" count="2" type="stmt"/>
         </file>
         <file name="returns.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\routes\returns.js">
-          <metrics statements="25" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <metrics statements="21" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
@@ -277,24 +280,20 @@
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
-          <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="13" count="0" type="stmt"/>
+          <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="17" count="0" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
-          <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="27" count="0" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
-          <line num="32" count="0" type="stmt"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="43" count="0" type="stmt"/>
-          <line num="48" count="0" type="stmt"/>
-          <line num="51" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
         </file>
         <file name="users.js" path="C:\Users\batman\Projects\tutorials\rest-api\nodeJS\vidly\routes\users.js">
           <metrics statements="24" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
