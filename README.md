@@ -8,6 +8,8 @@ Tutorials for REST API's
 - NodeJS Course (Arnell Google Drive)
 
   - [ ] Rest API
+    - Deployed to Heroku
+      [ ] >>> heroku create [name of application you want on heroku][ ] >>> git push [name of repository] master
     - Dependencies
       - [x] Express
       - [x] Joi (Input validation)
