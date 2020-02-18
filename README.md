@@ -11,3 +11,4 @@ Tutorials for REST API's
     [ ] >>> heroku create [name of application you want on heroku][ ] >>> git push [name of repository] master
 
 - [ ] NetNinja
+  - https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
