@@ -6,14 +6,20 @@ const auth = require('../middleware/auth');
 const express = require('express');
 const router = express.Router();
 
-router.post('/', auth, async (req, res) => {
-  const { error } = validateReturn(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
+const validate = validator => {
+  return (req, res, next) => {
+    const { error } = validator(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+    next();
+  };
+};
 
+router.post('/', [auth, validate(validateReturn)], async (req, res) => {
   const rental = await Rental.findOne({
     'customer._id': req.body.customerId,
     'movie._id': req.body.movieId
   });
+
   if (!rental) return res.status(404).send('Rental not found. ');
 
   if (rental.dateReturned) return res.status(400).send('Return already processed.');
